@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
+import styled from "styled-components";
+import { ButtonContainer } from "./Button";
 
 export default class Navbar extends Component {
   render() {
@@ -18,17 +20,19 @@ https://www.iconfinder.com/Makoto_msk
 
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
+            <Link to="/" className="nav-link text-white ">
               Products
             </Link>
           </li>
         </ul>
 
         <Link to="/cart" className="ml-auto">
-          <button>
-            <i className="fas fa-cart-plus" />
-            My Cart
-          </button>
+          <ButtonContainer>
+            <span className="mr-2">
+              <i className="fas fa-cart-plus" />
+            </span>
+            my cart
+          </ButtonContainer>
         </Link>
       </nav>
     );
