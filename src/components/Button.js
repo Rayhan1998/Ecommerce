@@ -5,18 +5,21 @@ export const ButtonContainer = styled.button`
   font-size: 1.4rem;
   background: transparent;
   border: 0.05rem solid var(--lightBlue);
-  color: var(--lightBlue);
+  border-color: ${props =>
+    props.cart ? "var(--mainYellow)" : "var(--lightBlue)"};
+  color: ${prop => (prop.cart ? "var(--mainYellow)" : "var(--lightBlue)")};
   border-radius: 0.5rem;
   paddding: 0.2rem 0.5rem;
   cursor: pointer;
   margin: 0.2rem 0.4rem 0.2rem 0;
-  transitions:all 0.5s ease-in-out;
+  transitions: all 0.5s ease-in-out;
   &:hover {
-      background:var(--lightBlue)
-      color:var(--mainBlue)
+    background: ${prop =>
+      prop.cart ? "var(--mainYellow)" : "var(--lightBlue)"};
+    color: var(--mainBlue);
   }
 
-  &:focus{
-      outline:none;
+  &:focus {
+    outline: none;
   }
 `;
