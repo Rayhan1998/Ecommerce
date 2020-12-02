@@ -8,7 +8,7 @@ import Cart from "./components/Cart/Cart";
 import Default from "./components/Default";
 import Modal from "./components/Modal";
 
-function App() {
+function App(props) {
   return (
     <div>
       <Navbar />
@@ -25,9 +25,7 @@ function App() {
           <Cart />
         </Route>
 
-        <Route>
-          <Default />
-        </Route>
+        <Route component={Default} />
       </Switch>
       <Modal />
     </div>
