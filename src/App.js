@@ -21,9 +21,7 @@ function App(props) {
           <Details />
         </Route>
 
-        <Route path="/cart">
-          <Cart />
-        </Route>
+        <Route path="/cart" component={Cart} />
 
         <Route component={Default} />
       </Switch>
