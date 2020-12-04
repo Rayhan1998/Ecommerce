@@ -9,11 +9,15 @@ class ProductProvider extends Component {
     products: [],
     detailProduct: detailProduct,
     cart: [],
+    localCart: [],
+    storedNames: [],
     modalOpen: false,
     modalProduct: detailProduct,
     cartSubTotal: 0,
     cartTax: 0,
-    cartTotal: 0
+    cartTotal: 0,
+    check: false,
+    isSet: false
   };
 
   componentDidMount() {
@@ -22,6 +26,7 @@ class ProductProvider extends Component {
 
   setProducts = () => {
     let tempProducts = [];
+
     storeProducts.forEach(item => {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
