@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
+import Footer from "./Footer";
 import { ProductConsumer } from "../context";
 
 export default class ProductList extends Component {
@@ -25,6 +26,7 @@ export default class ProductList extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }
